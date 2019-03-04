@@ -1,0 +1,5 @@
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Buffer\bin\Debug\Buffer.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Buffer\bin\Debug\Buffer.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Buffer\obj\Debug\Buffer.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Buffer\obj\Debug\Buffer.pdb
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\Buffer\obj\Debug\Buffer.csprojResolveAssemblyReference.cache

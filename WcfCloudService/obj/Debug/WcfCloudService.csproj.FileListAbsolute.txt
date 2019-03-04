@@ -1,0 +1,8 @@
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\bin\WcfCloudService.dll.config
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\bin\WcfCloudService.dll
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\bin\WcfCloudService.pdb
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\bin\Crypto.dll
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\bin\Crypto.pdb
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\obj\Debug\WcfCloudService.csprojResolveAssemblyReference.cache
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\obj\Debug\WcfCloudService.dll
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\WcfCloudService\obj\Debug\WcfCloudService.pdb

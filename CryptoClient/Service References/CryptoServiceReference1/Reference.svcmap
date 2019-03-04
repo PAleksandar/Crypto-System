@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="36457900-9869-46df-ba7d-85814fc7ec1f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:18282/CryptoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CryptoService.disco" MetadataType="Disco" ID="ee812a74-2185-4b04-b8ab-f4614f15a36f" SourceId="1" SourceUrl="http://localhost:18282/CryptoService.svc?disco" />
+    <MetadataFile FileName="CryptoService.xsd" MetadataType="Schema" ID="4309dd09-abc9-4fd4-8111-7c7459910666" SourceId="1" SourceUrl="http://localhost:18282/CryptoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CryptoService2.xsd" MetadataType="Schema" ID="1efd6050-0506-40fd-a40f-8dacd0612bde" SourceId="1" SourceUrl="http://localhost:18282/CryptoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CryptoService1.xsd" MetadataType="Schema" ID="a6907271-c52b-4c81-8d4b-a2d651180413" SourceId="1" SourceUrl="http://localhost:18282/CryptoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CryptoService.wsdl" MetadataType="Wsdl" ID="8b528982-d7a6-4581-bc3b-fcb0ab510fc2" SourceId="1" SourceUrl="http://localhost:18282/CryptoService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

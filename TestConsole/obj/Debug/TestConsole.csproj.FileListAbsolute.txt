@@ -1,0 +1,8 @@
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\bin\Debug\TestConsole.exe.config
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\bin\Debug\TestConsole.exe
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\bin\Debug\TestConsole.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\bin\Debug\Crypto.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\bin\Debug\Crypto.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\obj\Debug\TestConsole.exe
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\TestConsole\obj\Debug\TestConsole.pdb

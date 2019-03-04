@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CryptoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:18282/CryptoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:18282/CryptoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:18282/CryptoService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICryptoService_RSACrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSACrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSACrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSACryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSADecrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSADecrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSADecrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSADecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSACryptCTR_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSACryptCTR" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSACryptCTR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSACryptCTRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSADecryptCTR_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSADecryptCTR" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSADecryptCTR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSADecryptCTRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSASetIV_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSASetIV" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSASetIV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSASetIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSAGenerateRandomIV_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSAGenerateRandomIV" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSAGenerateRandomIV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSAGenerateRandomIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSASetAlgorithmProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:RSASetAlgorithmProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RSASetAlgorithmProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RSASetAlgorithmPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4Crypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4Crypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4Crypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4CryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4CryptCTR_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4CryptCTR" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4CryptCTR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4CryptCTRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4DecryptCTR_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4DecryptCTR" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4DecryptCTR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4DecryptCTRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4SetKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4SetKey" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4SetKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4SetKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4GenerateRandomKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4GenerateRandomKey" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4GenerateRandomKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4GenerateRandomKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4SetIV_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4SetIV" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4SetIV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4SetIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4GenerateRandomIV_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4GenerateRandomIV" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4GenerateRandomIV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4GenerateRandomIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4SetAlgorithmProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:RC4SetAlgorithmProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_RC4SetAlgorithmProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RC4SetAlgorithmPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2Crypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2Crypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2Crypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2CryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2SetKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2SetKey" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2SetKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2SetKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2GenerateRandomKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2GenerateRandomKey" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2GenerateRandomKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2GenerateRandomKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2SetIV_InputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2SetIV" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2SetIV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2SetIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2GenerateRandomIV_InputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2GenerateRandomIV" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_A5_2GenerateRandomIV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:A5_2GenerateRandomIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_TigerHash_InputMessage">
+    <wsdl:part name="parameters" element="tns:TigerHash" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_TigerHash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TigerHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Upload_InputMessage">
+    <wsdl:part name="parameters" element="tns:Upload" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Upload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Download_InputMessage">
+    <wsdl:part name="parameters" element="tns:Download" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Download_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_GetFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFiles" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_GetFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_DeleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_DeleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ICryptoService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICryptoService">
+    <wsdl:operation name="RSACrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSACrypt" message="tns:ICryptoService_RSACrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSACryptResponse" message="tns:ICryptoService_RSACrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSADecrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSADecrypt" message="tns:ICryptoService_RSADecrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSADecryptResponse" message="tns:ICryptoService_RSADecrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSACryptCTR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSACryptCTR" message="tns:ICryptoService_RSACryptCTR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSACryptCTRResponse" message="tns:ICryptoService_RSACryptCTR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSADecryptCTR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSADecryptCTR" message="tns:ICryptoService_RSADecryptCTR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSADecryptCTRResponse" message="tns:ICryptoService_RSADecryptCTR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSASetIV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSASetIV" message="tns:ICryptoService_RSASetIV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSASetIVResponse" message="tns:ICryptoService_RSASetIV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSAGenerateRandomIV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSAGenerateRandomIV" message="tns:ICryptoService_RSAGenerateRandomIV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSAGenerateRandomIVResponse" message="tns:ICryptoService_RSAGenerateRandomIV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RSASetAlgorithmProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RSASetAlgorithmProperties" message="tns:ICryptoService_RSASetAlgorithmProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RSASetAlgorithmPropertiesResponse" message="tns:ICryptoService_RSASetAlgorithmProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4Crypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4Crypt" message="tns:ICryptoService_RC4Crypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4CryptResponse" message="tns:ICryptoService_RC4Crypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4CryptCTR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4CryptCTR" message="tns:ICryptoService_RC4CryptCTR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4CryptCTRResponse" message="tns:ICryptoService_RC4CryptCTR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4Decrypt" message="tns:ICryptoService_RC4Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4DecryptResponse" message="tns:ICryptoService_RC4Decrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4DecryptCTR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4DecryptCTR" message="tns:ICryptoService_RC4DecryptCTR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4DecryptCTRResponse" message="tns:ICryptoService_RC4DecryptCTR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4SetKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4SetKey" message="tns:ICryptoService_RC4SetKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4SetKeyResponse" message="tns:ICryptoService_RC4SetKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4GenerateRandomKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4GenerateRandomKey" message="tns:ICryptoService_RC4GenerateRandomKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4GenerateRandomKeyResponse" message="tns:ICryptoService_RC4GenerateRandomKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4SetIV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4SetIV" message="tns:ICryptoService_RC4SetIV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4SetIVResponse" message="tns:ICryptoService_RC4SetIV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4GenerateRandomIV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4GenerateRandomIV" message="tns:ICryptoService_RC4GenerateRandomIV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4GenerateRandomIVResponse" message="tns:ICryptoService_RC4GenerateRandomIV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RC4SetAlgorithmProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/RC4SetAlgorithmProperties" message="tns:ICryptoService_RC4SetAlgorithmProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/RC4SetAlgorithmPropertiesResponse" message="tns:ICryptoService_RC4SetAlgorithmProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A5_2Crypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A5_2Crypt" message="tns:ICryptoService_A5_2Crypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A5_2CryptResponse" message="tns:ICryptoService_A5_2Crypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A5_2Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A5_2Decrypt" message="tns:ICryptoService_A5_2Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A5_2DecryptResponse" message="tns:ICryptoService_A5_2Decrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A5_2SetKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A5_2SetKey" message="tns:ICryptoService_A5_2SetKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A5_2SetKeyResponse" message="tns:ICryptoService_A5_2SetKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A5_2GenerateRandomKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A5_2GenerateRandomKey" message="tns:ICryptoService_A5_2GenerateRandomKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A5_2GenerateRandomKeyResponse" message="tns:ICryptoService_A5_2GenerateRandomKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A5_2SetIV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A5_2SetIV" message="tns:ICryptoService_A5_2SetIV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A5_2SetIVResponse" message="tns:ICryptoService_A5_2SetIV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="A5_2GenerateRandomIV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/A5_2GenerateRandomIV" message="tns:ICryptoService_A5_2GenerateRandomIV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/A5_2GenerateRandomIVResponse" message="tns:ICryptoService_A5_2GenerateRandomIV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TigerHash">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/TigerHash" message="tns:ICryptoService_TigerHash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/TigerHashResponse" message="tns:ICryptoService_TigerHash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/Upload" message="tns:ICryptoService_Upload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/UploadResponse" message="tns:ICryptoService_Upload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Download">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/Download" message="tns:ICryptoService_Download_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/DownloadResponse" message="tns:ICryptoService_Download_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/GetFiles" message="tns:ICryptoService_GetFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/GetFilesResponse" message="tns:ICryptoService_GetFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/DeleteFile" message="tns:ICryptoService_DeleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/DeleteFileResponse" message="tns:ICryptoService_DeleteFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICryptoService/Update" message="tns:ICryptoService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICryptoService/UpdateResponse" message="tns:ICryptoService_Update_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICryptoService" type="tns:ICryptoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RSACrypt">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSACrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSADecrypt">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSADecrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSACryptCTR">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSACryptCTR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSADecryptCTR">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSADecryptCTR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSASetIV">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSASetIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSAGenerateRandomIV">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSAGenerateRandomIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RSASetAlgorithmProperties">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RSASetAlgorithmProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4Crypt">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4Crypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4CryptCTR">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4CryptCTR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4Decrypt">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4Decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4DecryptCTR">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4DecryptCTR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4SetKey">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4SetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4GenerateRandomKey">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4GenerateRandomKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4SetIV">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4SetIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4GenerateRandomIV">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4GenerateRandomIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RC4SetAlgorithmProperties">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/RC4SetAlgorithmProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A5_2Crypt">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/A5_2Crypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A5_2Decrypt">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/A5_2Decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A5_2SetKey">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/A5_2SetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A5_2GenerateRandomKey">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/A5_2GenerateRandomKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A5_2SetIV">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/A5_2SetIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="A5_2GenerateRandomIV">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/A5_2GenerateRandomIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TigerHash">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/TigerHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/Upload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Download">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/Download" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFiles">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/GetFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/ICryptoService/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CryptoService">
+    <wsdl:port name="BasicHttpBinding_ICryptoService" binding="tns:BasicHttpBinding_ICryptoService">
+      <soap:address location="http://localhost:18282/CryptoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

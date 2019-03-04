@@ -1,0 +1,8 @@
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\bin\WcfCryptoService.dll.config
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\bin\WcfCryptoService.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\bin\WcfCryptoService.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\bin\Crypto.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\bin\Crypto.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\obj\Debug\WcfCryptoService.csprojResolveAssemblyReference.cache
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\obj\Debug\WcfCryptoService.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\WcfCryptoService\obj\Debug\WcfCryptoService.pdb

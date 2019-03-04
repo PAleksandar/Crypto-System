@@ -1,0 +1,5 @@
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Crypto\bin\Debug\Crypto.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Crypto\bin\Debug\Crypto.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Crypto\obj\Debug\Crypto.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\Crypto\obj\Debug\Crypto.pdb
+C:\Users\Aca\Documents\Visual Studio 2013\Projects\Crypto\Crypto\obj\Debug\Crypto.csprojResolveAssemblyReference.cache

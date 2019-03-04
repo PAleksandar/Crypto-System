@@ -1,0 +1,12 @@
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\bin\Debug\CryptoClient.exe.config
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\bin\Debug\CryptoClient.exe
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\bin\Debug\CryptoClient.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\bin\Debug\Buffer.dll
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\bin\Debug\Buffer.pdb
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.csprojResolveAssemblyReference.cache
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.CloudClientForm.resources
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.Form1.resources
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.Properties.Resources.resources
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.csproj.GenerateResource.Cache
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.exe
+C:\Users\Aca\documents\visual studio 2013\Projects\Crypto\CryptoClient\obj\Debug\CryptoClient.pdb
